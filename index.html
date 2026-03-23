@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Lucía ❤️</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .cuadro-texto {
+            border: 2px solid #ff4d6d;
+            box-shadow: 0 0 15px #ff4d6d;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            max-width: 500px;
+            margin-bottom: 30px;
+            background: rgba(255, 77, 109, 0.1);
+        }
+
+        h1 { color: #ff4d6d; text-shadow: 0 0 10px #ff4d6d; }
+
+        .galeria {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 100%;
+            align-items: center;
+        }
+
+        .foto-contenedor {
+            width: 90%;
+            max-width: 350px;
+            border: 2px solid #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(255,255,255,0.3);
+        }
+
+        img {
+            width: 100%;
+            display: block;
+        }
+
+        .boton-mimo {
+            background: #ff4d6d;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            border-radius: 50px;
+            margin-top: 30px;
+            cursor: pointer;
+            box-shadow: 0 0 15px #ff4d6d;
+        }
+
+        #mensaje {
+            margin-top: 20px;
+            font-weight: bold;
+            color: #ffb3c1;
+            text-align: center;
+            height: 25px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cuadro-texto">
+        <h1>Para Lucía ❤️</h1>
+        <p>Sé que hoy es un día difícil y me encantaría estar ahí con vos. Te armé esto para que te sientas un poquito más acompañada.</p>
+    </div>
+
+    <div class="galeria">
+        <div class="foto-contenedor"><img src="foto1.jpg"></div>
+        <div class="foto-contenedor"><img src="foto2.jpg"></div>
+        <div class="foto-contenedor"><img src="foto3.jpg"></div>
+    </div>
+
+    <button class="boton-mimo" onclick="mostrarMensaje()">¡Recibir un abrazo!</button>
+    <div id="mensaje"></div>
+
+    <script>
+        function mostrarMensaje() {
+            const frases = [
+                "✨ Te quiero muchísimo, Lucía ✨",
+                "❤️ Ya va a pasar, sos fuerte",
+                "🧸 Abrazo virtual de oso enviado",
+                "💆‍♀️ Imagina que te estoy haciendo mimos",
+                "🌹 Sos la más linda del mundo"
+            ];
+            const random = frases[Math.floor(Math.random() * frases.length)];
+            document.getElementById('mensaje').innerText = random;
+        }
+    </script>
+
+</body>
+</html>
